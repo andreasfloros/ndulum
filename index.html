@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.min.js"></script>
+    <title>Pendulum Simulator</title>
+</head>
+<body>
+  <div style="display: flex; width: 95%; height: 7.5%;" class="center-x">
+    <input type="range" min="1" max="50" value="5" id="mass-slider" autofocus>
+  </div>
+  <div style="width: 95%; height: 85%;" class="center">
+    <canvas style="background: radial-gradient(closest-side, #e6effc, #ddf1fe, white);;" id="pendulum" class="center"></canvas>
+  </div>
+</body>
+<link rel="stylesheet" href="style.css">
+<script src="pendulum.js"></script>
+<script src="index.js"></script>
+</html>

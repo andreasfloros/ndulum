@@ -1,0 +1,36 @@
+* { margin: 0; padding:0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); /* for IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* for Safari */
+  }
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0); /* for IE 9 */
+  -webkit-transform: translate(-50%, 0); /* for Safari */
+}
+
+.center-y {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%); /* for IE 9 */
+  -webkit-transform: translate(0, -50%); /* for Safari */
+}
+
+input[type="range"] {
+  width: 100%;
+  outline: none;
+}

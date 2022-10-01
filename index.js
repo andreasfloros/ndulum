@@ -3,7 +3,7 @@ let pendulumContext = pendulumCanvas.getContext('2d');
 let massSlider = document.getElementById('mass-slider');
 let pendulum = new Pendulum(n = parseInt(massSlider.value),
                             thetas = Array(n).fill(Math.PI*Math.random() - Math.PI/2),
-                            thetaDots = Array(n).fill(0.2*Math.random() - 0.1));
+                            thetaDots = Array(n).fill(5*Math.random() - 2.5));
 
 let pendulumColor = 'rgb(2,50,80)';
 let traceColor = 'rgba(2,50,80, 0.2)';
@@ -84,7 +84,7 @@ function updatePendulumMass() {
     let newN = parseInt(massSlider.value);
     if (pendulum.n < newN) {
         pendulum.thetas = pendulum.thetas.concat(Array(newN - pendulum.n).fill(pendulum.thetas[pendulum.thetas.length - 1]));
-        pendulum.thetaDots = pendulum.thetaDots.concat(Array(newN - pendulum.n).fill(-pendulum.thetaDots[pendulum.thetaDots.length - 1]));
+        pendulum.thetaDots = pendulum.thetaDots.concat(Array(newN - pendulum.n).fill(10*Math.random() - 5));
     }
     else if (pendulum.n > newN) {
         pendulum.thetas = pendulum.thetas.slice(0, newN);

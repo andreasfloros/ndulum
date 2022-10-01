@@ -84,7 +84,7 @@ function updatePendulumMass() {
     let newN = parseInt(massSlider.value);
     if (pendulum.n < newN) {
         pendulum.thetas = pendulum.thetas.concat(Array(newN - pendulum.n).fill(pendulum.thetas[pendulum.thetas.length - 1]));
-        pendulum.thetaDots = pendulum.thetaDots.concat(Array(newN - pendulum.n).fill(pendulum.thetaDots[pendulum.thetaDots.length - 1]));
+        pendulum.thetaDots = pendulum.thetaDots.concat(Array(newN - pendulum.n).fill(-pendulum.thetaDots[pendulum.thetaDots.length - 1]));
     }
     else if (pendulum.n > newN) {
         pendulum.thetas = pendulum.thetas.slice(0, newN);
